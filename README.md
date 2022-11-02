@@ -19,17 +19,17 @@ yarn
 ### Compile and Hot-Reload for Development
 
 ```sh
-npm dev
+yarn dev
 ```
 
 ### Compile and Minify for Production
 
 ```sh
-npm build
+yarn build
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
-npm lint
+yarn lint
 ```
