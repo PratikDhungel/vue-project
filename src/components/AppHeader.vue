@@ -1,7 +1,11 @@
 <template>
   <header>
     <h1>{{ title }}</h1>
-    <Button label="Add Text" color="green" />
+    <Button
+      @on-click="onToggleAddForm"
+      :label="showAddTask ? 'Close' : 'Add Task'"
+      color="green"
+    />
   </header>
 </template>
 
@@ -10,10 +14,19 @@ import Button from './Button.vue'
 
 export default {
   name: 'AppHeader',
-  props: ['title'],
+  props: {
+    title: String,
+    showAddTask: Boolean,
+  },
   components: {
     Button,
   },
+  methods: {
+    onToggleAddForm() {
+      this.$emit('toggle-add-form')
+    },
+  },
+  emits: ['toggle-add-form'],
 }
 </script>
 
